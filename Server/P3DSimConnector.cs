@@ -12,15 +12,15 @@ using Newtonsoft.Json;
 
 namespace MSFSAsVisuals.Server
 {
-    public class SimConnector
+    public class P3DSimConnector
     {
-        private const string moduleName = "MSFSAsVisuals.Client";
+        private const string moduleName = "MSFSAsVisuals.Server";
         private SimConnect simConnect;
         private CancellationTokenSource cancellationTokenSource;
         private Task simConnectPoll;
         private BlockingCollection<string> serverSendQueue;
 
-        public SimConnector(uint configIndex, BlockingCollection<string> sendQueue)
+        public P3DSimConnector(uint configIndex, BlockingCollection<string> sendQueue)
         {
             serverSendQueue = sendQueue;
             simConnect = new SimConnect(moduleName, IntPtr.Zero, 0, null, configIndex);

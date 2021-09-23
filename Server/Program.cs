@@ -29,8 +29,10 @@ namespace MSFSAsVisuals.Server
 
             Console.WriteLine("Server running");
 
-            SimConnector p3d = new SimConnector(0, packetsToSend);
-            Console.WriteLine("P3D Connected");
+            //P3DSimConnector p3d = new P3DSimConnector(0, packetsToSend);
+            //Console.WriteLine("P3D Connected");
+            XPSimConnector xpl = new XPSimConnector(packetsToSend);
+            Console.WriteLine("XPlane Connected");
 
             Console.ReadKey();
             Console.WriteLine("Exiting");
